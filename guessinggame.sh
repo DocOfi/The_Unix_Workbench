@@ -1,8 +1,8 @@
-!/usr/bin/env/bash
+#!/usr/bin/env/bash
 #File: guessinggame.sh
 
 function count_files {
-        local tot_files=$( ls -l /home/edmund/Documents | wc -l )
+        local tot_files=$( ls -p /home/edmund/Documents | grep -v / | wc -l )
         echo $tot_files
 }
 num_dir=$(count_files)
